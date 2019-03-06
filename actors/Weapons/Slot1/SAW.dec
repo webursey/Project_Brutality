@@ -23,7 +23,7 @@ Actor Chain_saw : PB_Weapon //replaces Chainsaw
 	Inventory.PickUpSound "IGOTSAW"
 	Weapon.UpSound "none"
 	weapon.readysound "weapons/chainsaw/idle"
-	Inventory.PickupMessage "You found the Chainsaw, find some meat!!! (Slot 1)"
+	Inventory.PickupMessage "$GOTCHAINSAW"
 	+WEAPON.NOAUTOAIM
 	+WEAPON.AXEBLOOD
 	+WEAPON.NOALERT
