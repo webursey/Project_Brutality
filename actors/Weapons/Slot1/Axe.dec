@@ -3,7 +3,7 @@ ACTOR BrutalAxe : PB_Weapon
 	Obituary "%o was choped down by %k's axe."
     AttackSound "None"
     Inventory.PickupSound "KNIFUP"
-	Inventory.Pickupmessage "You got the Axe!"
+	Inventory.Pickupmessage "$GOTAXE"
     +WEAPON.NOAUTOAIM
     +WEAPON.NOAUTOFIRE
     +FORCEXYBILLBOARD

@@ -1,5 +1,11 @@
 [enu default]
 GOTCHAINSAW = "You found the Chainsaw, find some meat!!! (Slot 1)";
+GOTAXE = "You got the Axe!";
 
 [rus]
 GOTCHAINSAW = "Вы нашли бензопилу, теперь устрой мясо!!! (Слот 1)";
+GOTAXE = "Вы нашли топор!"
+
+[ita]
+GOTCHAINSAW = "Hai trovato la Motosega, ora trovati della carne!!! (Slot 1)";
+GOTAXE = "Hai raccolto l'Ascia!";

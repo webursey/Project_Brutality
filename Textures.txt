@@ -67,7 +67,12 @@ graphic fontb033, 32, 80 //UC
 	XScale 5.0
 	YScale 5.0
 }
-
+//Inverted Exclmation Point
+graphic fontb0331, 32, 80 //UC
+{
+	XScale 5.0
+	YScale 5.0
+}
 //Quote
 graphic fontb034, 64, 32
 {
