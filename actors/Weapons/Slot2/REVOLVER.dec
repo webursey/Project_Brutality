@@ -48,7 +48,7 @@ ACTOR Revolver : PB_Weapon
 	Obituary "%o was shot down by %k's revolver."
     AttackSound "None"
 	Inventory.PickupSound "REVOUP"
-	Inventory.Pickupmessage "You got the UAC .500 Magnum! (Slot 2)"
+	Inventory.Pickupmessage "$GOTMAGNUM"
     +WEAPON.NOAUTOAIM
     +WEAPON.NOALERT
     +WEAPON.NOAUTOFIRE

@@ -47,7 +47,7 @@ ACTOR BDPistol : PB_Weapon //Replaces Pistol
     AttackSound "None"
 	Tag "UAC .45 Pistol"
     Inventory.PickupSound "weapons/pistolup"
-	Inventory.Pickupmessage "You got the UAC .45 Pistol! (Slot 2)"
+	Inventory.Pickupmessage "$GOTPISTOL"
 	+WEAPON.WIMPY_WEAPON
     +WEAPON.NOAUTOAIM
     +WEAPON.NOAUTOFIRE

@@ -1,0 +1,8 @@
+[ita]
+GOTCHAINSAW = "Hai trovato la Motosega, ora trovati della carne!!! (Slot 1)";
+GOTAXE = "Hai raccolto l'Ascia!";
+GOTPISTOL = "Hai raccolto la Pistola UAC .45! (Slot 2)";
+[esn]
+GOTCHAINSAW = "Encontraste la Motosierra, ¡A buscar algo de carne! (Slot 1)";
+GOTAXE = "¡Obtuviste el Hacha!";
+GOTPISTOL = "¡Obtuviste la Pistola UAC .45! (Slot 2)"

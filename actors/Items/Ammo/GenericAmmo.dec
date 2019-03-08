@@ -69,7 +69,7 @@ ACTOR TankAmmo : Ammo
 {
 	Game Doom
 	SpawnID 11
-	Inventory.PickupMessage "Picked up a Magazine."
+	Inventory.PickupMessage "$GOTCLIP"
 	Inventory.Amount 10
 	Inventory.MaxAmount 100
 	Ammo.BackpackAmount 0
@@ -88,7 +88,7 @@ ACTOR MechAmmo : Ammo
 {
 	Game Doom
 	SpawnID 11
-	Inventory.PickupMessage "Picked up a Magazine."
+	Inventory.PickupMessage "$GOTCLIP"
 	Inventory.Amount 10
 	Inventory.MaxAmount 100
 	Ammo.BackpackAmount 0
@@ -108,7 +108,7 @@ ACTOR MechAmmo : Ammo
 ACTOR HeavyMachinegunAmmo : Ammo
 {
 	Game Doom
-	Inventory.PickupMessage "Picked up a Magazine."
+	Inventory.PickupMessage "$GOTCLIP"
 	Inventory.Amount 100
 	Inventory.MaxAmount 2000
 	Ammo.BackpackAmount 0
@@ -127,7 +127,7 @@ ACTOR HeavyMachinegunAmmo : Ammo
 ACTOR MechRocketAmmo : Ammo
 {
 	Game Doom
-	Inventory.PickupMessage "Picked up a Magazine."
+	Inventory.PickupMessage "$GOTCLIP"
 	Inventory.Amount 5
 	Inventory.MaxAmount 60
 	Ammo.BackpackAmount 0
@@ -145,7 +145,7 @@ ACTOR MechRocketAmmo : Ammo
 ACTOR MechLaserAmmo : Ammo
 {
 	Game Doom
-	Inventory.PickupMessage "Picked up a Magazine."
+	Inventory.PickupMessage "$GOTCLIP"
 	Inventory.Amount 30
 	Inventory.MaxAmount 200
 	Ammo.BackpackAmount 0
@@ -164,7 +164,7 @@ ACTOR MechLaserAmmo : Ammo
 ACTOR MechMOrtarAmmo : Ammo
 {
 	Game Doom
-	Inventory.PickupMessage "Picked up a Magazine."
+	Inventory.PickupMessage "$GOTCLIP"
 	Inventory.Amount 1
 	Inventory.MaxAmount 20
 	Ammo.BackpackAmount 0
@@ -183,7 +183,7 @@ ACTOR MechMOrtarAmmo : Ammo
 ACTOR HelicopterRocketAmmo : Ammo
 {
 	Game Doom
-	Inventory.PickupMessage "Picked up a Magazine."
+	Inventory.PickupMessage "$GOTCLIP"
 	Inventory.Amount 1
 	Inventory.MaxAmount 40
 	Ammo.BackpackAmount 0
