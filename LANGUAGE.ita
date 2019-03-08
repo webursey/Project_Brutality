@@ -8,3 +8,8 @@ GOTCHAINSAW = "Encontraste la Motosierra, ¡A buscar algo de carne! (Slot 1)";
 GOTAXE = "¡Obtuviste el Hacha!";
 GOTPISTOL = "¡Obtuviste la Pistola UAC .45! (Slot 2)"
 GOTMAGNUM = "¡Obtuviste la Magnum UAC .500! (Slot 2)";
+[ptb]
+GOTCHAINSAW = "Você obteve a Motoserra! procure alguma carne! (Slot 1)";
+GOTAXE = "Você obteve o Machado!";
+GOTPISTOL = "Você obteve a Pistola UAC .45! (Slot 2)"
+GOTMAGNUM = "Você obteve a UAC .500 Magnum! (Slot 2)";
