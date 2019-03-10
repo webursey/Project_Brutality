@@ -3,13 +3,19 @@ GOTCHAINSAW = "Hai trovato la Motosega, ora trovati della carne!!! (Slot 1)";
 GOTAXE = "Hai raccolto l'Ascia!";
 GOTPISTOL = "Hai raccolto la Pistola UAC .45! (Slot 2)";
 GOTMAGNUM = "Hai raccolto la Magnum UAC .500! (Slot 2)";
+GOTUNMAKER = "Hai raccolto il sinistro Decostruttore, la penultima furia dell'inferno stesso. (Slot 9)";
 [esn]
 GOTCHAINSAW = "Encontraste la Motosierra, ¡A buscar algo de carne! (Slot 1)";
 GOTAXE = "¡Obtuviste el Hacha!";
-GOTPISTOL = "¡Obtuviste la Pistola UAC .45! (Slot 2)"
+GOTPISTOL = "¡Obtuviste la Pistola UAC .45! (Slot 2)";
 GOTMAGNUM = "¡Obtuviste la Magnum UAC .500! (Slot 2)";
+GOTUNMAKER = "Obtuviste el siniestro Deshacedor, la penúltima ira de l mismo infierno. (Slot 9)"
 [ptb]
 GOTCHAINSAW = "Você obteve a Motoserra! procure alguma carne! (Slot 1)";
 GOTAXE = "Você obteve o Machado!";
 GOTPISTOL = "Você obteve a Pistola UAC .45! (Slot 2)"
 GOTMAGNUM = "Você obteve a UAC .500 Magnum! (Slot 2)";
+[mki]
+GOTCHAINSAW = "Ја најде Моторната пила, сега најди некое месо! (Слот 1)";
+// Yeah, people had troubles translating the Unmaker to Russian/Macedonian.
+GOTUNMAKER = "Го најде Уништувачот, претпоследниот гнев на самиот Пекол. (Слот 9)";

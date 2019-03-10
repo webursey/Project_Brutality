@@ -4,8 +4,8 @@ GOTAXE = "You got the Axe!";
 GOTCLIP = "Picked up a Magazine.";
 GOTPISTOL = "You got the UAC .45 Pistol! (Slot 2)";
 GOTMAGNUM = "You got the UAC .500 Magnum! (Slot 2)";
+GOTUNMAKER = "You got the sinister Unmaker, the penultimate wrath of Hell itself. (Slot 9)";
 
-//Will be done once GZDoom has the extra Polish character sets.
-//[plk]
-//GOTCHAINSAW = "Zdobyłeś piłę łańcuchową, znajdź trochę mięsa! (Slot 1)"
-//GOTAXE = "Zdobyłeś siekierę! (Slot 1)"
+[plk]
+GOTCHAINSAW = "Zdobyłeś piłę łańcuchową, znajdź trochę mięsa! (Slot 1)"
+GOTAXE = "Zdobyłeś siekierę! (Slot 1)"
