@@ -4,11 +4,13 @@ GOTAXE = "Hai raccolto l'Ascia!";
 GOTPISTOL = "Hai raccolto la Pistola UAC .45! (Slot 2)";
 GOTMAGNUM = "Hai raccolto la Magnum UAC .500! (Slot 2)";
 GOTUNMAKER = "Hai raccolto il sinistro Decostruttore, la penultima furia dell'inferno stesso. (Slot 9)";
+GOTNAILGUN = "Hai raccolto la Sparachiodi Pesante UAC240!";
 [esn]
 GOTCHAINSAW = "Encontraste la Motosierra, ¡A buscar algo de carne! (Slot 1)";
 GOTAXE = "¡Obtuviste el Hacha!";
 GOTPISTOL = "¡Obtuviste la Pistola UAC .45! (Slot 2)";
 GOTMAGNUM = "¡Obtuviste la Magnum UAC .500! (Slot 2)";
+GOTNAILGUN = "¡Obtuviste el Arma Clavadora Pesada UAC240!";
 GOTUNMAKER = "Obtuviste el siniestro Deshacedor, la penúltima ira de l mismo infierno. (Slot 9)"
 [ptb]
 GOTCHAINSAW = "Você obteve a Motoserra! procure alguma carne! (Slot 1)";

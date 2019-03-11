@@ -63,7 +63,7 @@ Weapon.AmmoUse2 0
 	+DONTGIB
 +WEAPON.NOAUTOAIM
 Inventory.PickupSound "CBOXPKUP"
-Inventory.PickupMessage "You got the UAC240 Heavy Nailgun Gun!"
+Inventory.PickupMessage "$GOTNAILGUN"
 Obituary "%o was became a leaking piece of meat by %k's heavy nailgun gun"
 AttackSound "none"
 Tag "UAC-240 Perforator Nailgun"

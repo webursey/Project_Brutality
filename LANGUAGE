@@ -5,6 +5,7 @@ GOTCLIP = "Picked up a Magazine.";
 GOTPISTOL = "You got the UAC .45 Pistol! (Slot 2)";
 GOTMAGNUM = "You got the UAC .500 Magnum! (Slot 2)";
 GOTUNMAKER = "You got the sinister Unmaker, the penultimate wrath of Hell itself. (Slot 9)";
+GOTNAILGUN = "You got the UAC240 Heavy Nailgun!";
 
 [plk]
 GOTCHAINSAW = "Zdobyłeś piłę łańcuchową, znajdź trochę mięsa! (Slot 1)"
