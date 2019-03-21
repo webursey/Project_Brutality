@@ -21,3 +21,4 @@ GOTMAGNUM = "Você obteve a UAC .500 Magnum! (Slot 2)";
 GOTCHAINSAW = "Ја најде Моторната пила, сега најди некое месо! (Слот 1)";
 // Yeah, people had troubles translating the Unmaker to Russian/Macedonian.
 GOTUNMAKER = "Го најде Уништувачот, претпоследниот гнев на самиот Пекол. (Слот 9)";
+GOTNAILGUN = "Го најде митралезот со клинци наместо куршуми UAC240!";

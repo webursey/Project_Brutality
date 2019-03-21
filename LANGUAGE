@@ -10,3 +10,4 @@ GOTNAILGUN = "You got the UAC240 Heavy Nailgun!";
 [plk]
 GOTCHAINSAW = "Zdobyłeś piłę łańcuchową, znajdź trochę mięsa! (Slot 1)"
 GOTAXE = "Zdobyłeś siekierę! (Slot 1)";
+GOTNAILGUN = "Zdobyłeś ciężki pistolet na gwoździe UAC240!";
