@@ -6,3 +6,27 @@ Model Chain_saw
 
 	Frameindex VSAW A 0 0
 }
+
+Model ThrownAxe
+{
+	Path "MODELS/PBVP/Weapons/Slot1"
+	Model 0 "Axe.MD3"
+	SKIN 0 "Axe.pal.PNG"
+
+	Frameindex VAX0 A 0 1
+	Frameindex VAX0 B 0 2
+	Frameindex VAX0 C 0 3
+	Frameindex VAX0 D 0 4
+	Frameindex VAX0 E 0 5
+	Frameindex VAX0 F 0 6
+	Frameindex VAX0 G 0 7
+	Frameindex VAX0 H 0 8
+	Frameindex VAX0 I 0 9
+	Frameindex VAX0 J 0 10
+	Frameindex VAX0 K 0 11
+	Frameindex VAX0 L 0 12
+	Frameindex VAX0 M 0 13
+	Frameindex VAX0 N 0 14
+	Frameindex VAX0 O 0 15
+	Frameindex VAX0 P 0 16
+}
