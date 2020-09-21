@@ -12,6 +12,7 @@ Model ThrownAxe
 	Path "MODELS/PBVP/Weapons/Slot1"
 	Model 0 "Axe.MD3"
 	SKIN 0 "Axe.pal.PNG"
+	ANGLEOFFSET 180
 
 	Frameindex VAX0 A 0 1
 	Frameindex VAX0 B 0 2
