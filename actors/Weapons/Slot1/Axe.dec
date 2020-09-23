@@ -295,8 +295,13 @@ ACTOR BrutalAxe : PB_Weapon
 			TNT1 A 1
 			Goto Ready	
 		Spawn:
-			AXE0 Z -1
-			Stop
+			TNT1 A 0 NoDelay A_jumpif( V5_MODELS == 1 , "Spawn.V5")
+			AXE0 Z 10
+			LOOP 
+		Spawn.V5:
+			TNT1 A 0 A_jumpif( V5_MODELS == 0 , "Spawn")
+			VAX0 Z 10
+			LOOP
 			
 	FlashPunching:
 		TNT1 A 5

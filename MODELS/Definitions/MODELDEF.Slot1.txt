@@ -31,3 +31,13 @@ Model ThrownAxe
 	Frameindex VAX0 O 0 14
 	Frameindex VAX0 P 0 15
 }
+
+Model BrutalAxe
+{
+	Path "MODELS/PBVP/Weapons/Slot1"
+	Model 0 "AXE0Z0.MD3"
+	SKIN 0 "Axe.pal.PNG"
+	ANGLEOFFSET 180
+
+	Frameindex VAX0 Z 0 0
+}
