@@ -16,7 +16,7 @@ Weapon.AmmoType2 "Cell"
 	+FLOORCLIP
 	+DONTGIB
 Inventory.PickupSound "BFGPICK"
-Inventory.PickupMessage "You got the Black Hole Generator! (Slot 8)"
+Inventory.PickupMessage "You got the Black Hole Generator! (Slot 9)"
 Obituary "%o got vaporized by %k's Black Hole Generator."
 Tag "Black Hole Generator"
 States
@@ -25,7 +25,9 @@ Spawn:
 	PRDC Z -1
 	Stop
 Select:
-		TNT1 A 0 A_Overlay(-10, "FirstPersonLegsStand")
+		TNT1 A 0
+		Goto SelectFirstPersonLegs
+		SelectContinue:
 		TNT1 A 0 A_TakeInventory("RifleSelected",1)
 		TNT1 A 0 A_TakeInventory("CarbineSelected",1)
 		TNT1 A 0 A_TakeInventory("FistsSelected",1)

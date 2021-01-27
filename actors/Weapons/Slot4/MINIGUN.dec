@@ -106,15 +106,16 @@ ACTOR Mini_Gun : PB_Weapon Replaces Chaingun
 	+DONTGIB
 	//Weapon.SelectionOrder 700
 	Weapon.AmmoType "NewClip"
-	Weapon.AmmoGive 50
+	Weapon.AmmoGive 30
 	Weapon.AmmoUse 1
     +WEAPON.NOAUTOAIM
 	Inventory.PickupSound "CBOXPKUP"
-	Inventory.PickupMessage "You got the UAC Mach-3 Minigun! (Slot 4)"
+	Inventory.PickupMessage "You got the UAC Mach-3 Minigun! (Slot 5)"
 	Obituary "%o became Swiss Cheese by %k's Gatling Gun"
 	AttackSound "none"
 	Tag "Mach-3 Minigun"
 	Scale 0.4
+	Inventory.AltHUDIcon "MG0ZA0"
 States
 {
 	Steady:
@@ -486,7 +487,8 @@ States
 			PB_HandleCrosshair(75);
 			A_TakeInventory("PB_LockScreenTilt",1);
 		}
-		TNT1 A 0 A_Overlay(-10, "FirstPersonLegsStand")
+		Goto SelectFirstPersonLegs
+		SelectContinue:
 		TNT1 A 0 A_ZoomFactor(1.0)
 		TNT1 A 0 A_GunFlash("Glow")
 		TNT1 A 0 A_TakeInventory("RifleSelected",1)
@@ -622,7 +624,13 @@ States
 			A_FireBullets(4, 4, 1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
+			
 			A_Giveinventory("OverHeating",1);
 			////A_GunFlash;
 		}
@@ -645,7 +653,12 @@ States
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("MiniBeltPieceSpawn",0,0,-12,-18);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
 			A_Giveinventory("OverHeating",1);
 			////A_GunFlash;
 		}
@@ -667,7 +680,12 @@ States
 			A_FireBullets(4, 4, 1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
 			A_Giveinventory("OverHeating",1);
 			////A_GunFlash;
 		}
@@ -690,7 +708,12 @@ States
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("MiniBeltPieceSpawn",0,0,-12,-18);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
 			A_Giveinventory("OverHeating",1);
 			////A_GunFlash;
 			A_ReFire("Holding1");
@@ -812,7 +835,12 @@ States
 			A_FireBullets(4, 4, 1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
 			A_Giveinventory("OverHeating",1);
 			A_StartSound("weapons/minigun/chaingunmode/fire");
 			////A_GunFlash;
@@ -833,7 +861,12 @@ States
 			A_FireBullets(4, 4, 1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
 			A_Giveinventory("OverHeating",1);
 			A_StartSound("weapons/minigun/chaingunmode/fire");
 			////A_GunFlash;
@@ -850,7 +883,12 @@ States
 			A_FireBullets(4, 4, 1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
 			A_Giveinventory("OverHeating",1);
 			A_StartSound("weapons/minigun/chaingunmode/fire");
 			////A_GunFlash;
@@ -877,7 +915,12 @@ States
 			A_FireBullets(4, 4, 1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
 			A_Giveinventory("OverHeating",1);
 			A_StartSound("weapons/minigun/chaingunmode/fire");
 			////A_GunFlash;
@@ -907,7 +950,12 @@ States
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("MiniBeltPieceSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
 			A_Giveinventory("OverHeating",1);
 			A_StartSound("weapons/minigun/chaingunmode/fire");
 			////A_GunFlash;
@@ -937,7 +985,12 @@ States
 			A_FireBullets(4, 4, 1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
-			A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-3,3), 0, -1, random(-3,3));}
 			A_Giveinventory("OverHeating",1);
 			A_StartSound("weapons/minigun/chaingunmode/fire");
 		//	//A_GunFlash;
@@ -1054,7 +1107,12 @@ States
 			A_Overlay(3,"AmmoMeterOverlayFire");
 			A_FireBullets(4, 3, -1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
-			A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));}
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Giveinventory("OverHeating",1);
 		//	//A_GunFlash;
@@ -1072,7 +1130,12 @@ States
 			A_Overlay(3,"AmmoMeterOverlayFire");
 			A_FireBullets(4, 3, -1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
-			A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));}
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("MiniBeltPieceSpawn",0,0,-12,-18);
 			A_Giveinventory("OverHeating",1);
@@ -1083,7 +1146,12 @@ States
 			A_Overlay(3,"AmmoMeterOverlayFire");
 			A_FireBullets(4, 3, -1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
-			A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));}
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Giveinventory("OverHeating",1);
 		//	//A_GunFlash;
@@ -1101,7 +1169,12 @@ States
 			A_Overlay(3,"AmmoMeterOverlayFire");
 			A_FireBullets(4, 3, -1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
-			A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));}
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("MiniBeltPieceSpawn",0,0,-12,-18);
 			A_Giveinventory("OverHeating",1);
@@ -1112,7 +1185,12 @@ States
 			A_Overlay(3,"AmmoMeterOverlayFire");
 			A_FireBullets(4, 3, -1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
-			A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));}
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Giveinventory("OverHeating",1);
 		//	//A_GunFlash;
@@ -1130,7 +1208,12 @@ States
 			A_Overlay(3,"AmmoMeterOverlayFire");
 			A_FireBullets(4, 3, -1, 10, "MachineGunBulletPuff", 1);
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
-			A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));}
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("MiniBeltPieceSpawn",0,0,-12,-18);
 			A_Giveinventory("OverHeating",1);
@@ -1195,7 +1278,14 @@ States
 		//TNT1 A 0 A_JumpIf(CountInv("NewClip") < 1, "HoldingDeathDealer_Stop")
         8HBF A 1 BRIGHT {
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
-			A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-4,4));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, -4, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);//Left
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);//Center
+				 A_RailAttack(0, 4, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);//Right
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));}
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
@@ -1217,7 +1307,14 @@ States
         8HBF BC 1 A_Overlay(3,"AmmoMeterOverlayIdle_DeathDealer")
         8HBF D 1 BRIGHT {
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
-			A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-4,4));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, -4, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);//Left
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);//Center
+				 A_RailAttack(0, 4, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);//Right
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));}
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
@@ -1239,7 +1336,14 @@ States
         8HBF EF 1 A_Overlay(3,"AmmoMeterOverlayIdle_DeathDealer")
         8HBF G 1 BRIGHT {
 			A_FireCustomMissile("GunFireSmoke", 0, 0, 0, 0, 0, 0);
-			A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-4,4));
+			if(GetCvar("PB_alttracer") >=1)
+				{
+				 A_RailAttack(0, -4, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);//Left
+				 A_RailAttack(0, 0, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);//Center
+				 A_RailAttack(0, 4, 0, none,none, RGF_SILENT|RGF_NOPIERCING|RGF_EXPLICITANGLE, 0, none,0.1,0.1,700,0,1,1.0,"Tracer_Trail",-6,0,0);//Right
+				// A_FireBullets (0.1, 0.1, -1, 22, "HitPuff", FBF_NORANDOM,8192,none, -2,0);
+				}
+			else {A_FireCustomMissile("MinigunTracer", random(-6,6), 0, -1, random(-6,6));}
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
 			A_Firecustommissile("FiftyCaseSpawn",0,0,-12,-18);
