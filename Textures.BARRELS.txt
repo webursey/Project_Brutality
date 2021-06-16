@@ -91,6 +91,7 @@ Texture "EXB1K0", 23, 32
 	Offset 11, 32
 	Patch "BARSHE3T", -54, -56
 }
+
 Texture "EXB1L0", 23, 32
 {
 	Offset 11, 32
