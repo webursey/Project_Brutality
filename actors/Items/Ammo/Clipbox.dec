@@ -89,7 +89,7 @@ ACTOR SmartClipBox : SwitchableDecoration
 ACTOR NewClip : Ammo //Replaces Clip
 {
     Game Doom
-	Scale 0.75
+	Scale 0.12
 	+DONTGIB
 	+FLOORCLIP
 	Inventory.PickUpMessage "Picked up a High Caliber Magazine"
@@ -129,10 +129,10 @@ ACTOR NormalClipBox2 : NewClip
 
 ACTOR NormalClipBox : NewClip
 {
-	Scale 0.75
+	Scale 0.18
 	Inventory.PickupMessage "Picked up a Box of High Caliber Bullets."
 	Inventory.PickupSound "CBOXPKUP"
-	Inventory.Amount 50
+	Inventory.Amount 35
     Inventory.MaxAmount 300
     Ammo.BackpackAmount 50
     Ammo.BackpackMaxAmount 600
