@@ -28,7 +28,7 @@ const MAXITERATIONS = 32676;
 #include "zscript/Gore/PBGore.zc"
 #include "zscript/Gore/PBGoreEffects.zc"
 #include "zscript/Decorations/PBDeadGeneric.zc"
-
+#include "zscript/Decorations/PBBarrels.zc"
 #include "zscript/Decorations/PBKeys.zc"
 
 //Monsters
