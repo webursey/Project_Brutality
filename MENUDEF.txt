@@ -281,7 +281,11 @@ OptionMenu "GameplaySettings"
 	StaticText " "
 	StaticText " "
 	
-	Option "Set aiming mode","pb_toggle_aim_hold", "AimingStyle" //Looks like we are using this newer line.
+	Option "$PB_RESPECT", "pb_respectweapons", "OnOff"
+	StaticText " "
+	StaticText " "
+	
+	Option "Aiming mode","pb_toggle_aim_hold", "AimingStyle" //Looks like we are using this newer line.
 	StaticText " "
 	StaticText " "
 
@@ -303,7 +307,7 @@ OptionMenu "GameplaySettings"
 	
 	Option "Advanced movement on hazards","pb_hazardmovement", "OnOff"
 	StaticText "Toggles hazard floors to inhibit or allow advanced movement, such as jumping and dashing"
-	StaticText "Leave this off for maps where advanced movement is not intended!!!"
+	StaticText "Turn this off for maps where advanced movement is not intended!!!"
 	StaticText " "
 	
 	StaticText " "
@@ -313,9 +317,25 @@ OptionMenu "GameplaySettings"
 	StaticText " "
 	
 	StaticText " "
+	Option "Realistic damage on certain weapons", "pb_realdamage", "OnOff"
+	StaticText "Weapons that are not intended to damage the player will deal damage if this is turned on."
+	StaticText "Only the Shotgun upgrade and Freezer are affected", sapphire
+	StaticText "This will not affect explosive or BFG based weapons.", brick
+	StaticText " "
+	
+	StaticText " "
 	Submenu " - Smart Scavenger - ",				"SmartScavengerMenu"
 	StaticText "Allows Health and/or Ammo containers to be opened."
 	StaticText " "
+	StaticText " "
+	
+	StaticText " "
+	Option "Double Jump",				"pb_doublejump", "DoubleJumpOption"
+	StaticText " "
+
+	ZMoveOption	"Dash Enabled",							"Enable dashing",																		"pb_dash",					"OnOff"
+	StaticText " "
+	ZMoveOption	"Classic Double Tap Dash",						"Enable dashing double tapping trigger",												"pb_doubletap",				"OnOff"
 	StaticText " "
 	
 	StaticText " "
@@ -659,10 +679,7 @@ OptionMenu "MonsterSpawns"
 	
 	Option "No Rocket Launcher Sergeant", "pb_NoRocketSergeant", "YesOrNo"
 	StaticText " "
-	
-	Option "No Pyro Sergeant", "pb_NoPyroSergeant", "YesOrNo"
-	StaticText " "
-	
+		
 	Option "No Demon Tech Soldier", "pb_NoDemonTechSoldier", "YesOrNo"
 	StaticText " "
 	
@@ -893,6 +910,11 @@ OptionValue "DisabledOption"
 	1, "Disabled"
 }
 
+OptionValue "DoubleJumpOption"
+{
+	0, "Disabled"
+	2, "Enabled"
+}
 
 OptionValue "maxgibs"
 {
@@ -928,6 +950,7 @@ OptionMenu "WeaponVisuals"
 	ZMoveSlider "Yaw Sway Range", 						"Maximum Distance weapons can sway",													"zm_yawswayrange",			0,		8,		0.1
 	ZMoveSlider "Yaw Sway Friction", 					"How fast sprites will tend to realign to the center",									"zm_yawswayfriction",		5,		14,		0.5
 	ZMoveOption "Yaw Sway Direction", 					"Set wherever weapons sway in the direction you turn or the opposite",					"zm_yawswaydirection",		"SwayDirection"
+	ZMoveOption "Vertical Sway Type",					"How should vertical sway look",														"zm_pitchswaytype",			"VSwayType"
 	StaticText 	""
 	StaticText	"Vertical Offset", Orange
 	ZMoveSlider "Offset Speed", 						"How fast weapons raise and fall depending on your vertical velocity",					"zm_offsetspeed",			50,		100,	1,		0
@@ -954,6 +977,12 @@ OptionValue "SwayDirection"
 {
 	0, "Opposite Direction"
 	1, "Same Direction"
+}
+
+OptionValue "VSwayType"
+{
+	0, "Both Ways"
+	1, "One Way"
 }
 
 OptionValue "OffsetDirection"
