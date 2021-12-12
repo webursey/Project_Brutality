@@ -1476,7 +1476,7 @@ ACTOR PB_Pistol : PB_Weapon //Replaces Pistol
 			A_WeaponReady(WRF_NOFIRE);
 		}
 		TNT1 A 0 A_JumpIfInventory("PB_PistolHasUnloaded", 1, 11)
-		TNT1 A 0 A_FireCustomMissile("EmptyClipMP40",5,0,8,-4)
+		
 		D5GB BCD 1 {
 			if (CountInv("SilencerEquipped") == 1 ) {
 					A_SetWeaponSprite("D5GD");
@@ -1484,7 +1484,7 @@ ACTOR PB_Pistol : PB_Weapon //Replaces Pistol
 			A_SetRoll(roll+.8, SPF_INTERPOLATE);
 			A_WeaponReady(WRF_NOFIRE);
 		}
-		D5GB EFGHI 1 {
+		D5GB EEEFFGHI 1 {
 		
 			if (CountInv("SilencerEquipped") == 1 ) {
 					A_SetWeaponSprite("D5GD");
@@ -1493,14 +1493,15 @@ ACTOR PB_Pistol : PB_Weapon //Replaces Pistol
 			A_WeaponReady(WRF_NOFIRE);
 		}
 		TNT1 A 0 A_PlaySoundEx("PSRLIN", "Auto")
-		D5GB KKLMNOPQRS 1 {
+		TNT1 A 0 A_FireCustomMissile("EmptyClipMP40",270,0,8,-4)
+		D5GB KLMNNOPQQRRS 1 {
 			if (CountInv("SilencerEquipped") == 1 ) {
 					A_SetWeaponSprite("D5GD");
 			}
 			A_SetRoll(roll-.1, SPF_INTERPOLATE);
 			A_WeaponReady(WRF_NOFIRE);
 		}
-		D5GB TUVWX 1 {
+		D5GB TUVVVWWX 1 {
 			if (CountInv("SilencerEquipped") == 1 ) {
 					A_SetWeaponSprite("D5GD");
 			}
