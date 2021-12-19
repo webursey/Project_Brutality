@@ -1,3 +1,4 @@
+/*
 Model GrowingNUKAGEPool     // Name of actor in DECORATE
 {
    Path "models/bloodspot"    // Path to model in PK3
@@ -257,3 +258,4 @@ Model GrowingNUKAGEPool     // Name of actor in DECORATE
    ZOffset 0.65
    FrameIndex BPDL Z 0 0         // The sprite lump, sprite frame, model index, frame number
 }
+*/

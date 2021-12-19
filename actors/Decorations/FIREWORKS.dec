@@ -67,7 +67,7 @@ Actor NewBarrelExploFX
 		stop
 	}
 }
-
+/*
 ACTOR ExplosiveBarrel1 : SwitchableDecoration Replaces ExplosiveBarrel
 {
 	Game Doom
@@ -455,7 +455,7 @@ ACTOR ValientExplosiveBarrelPerformanceFix1 : ExplosiveBarrel1
 		Goto See
 	}
 }
-
+*/
 Actor GotBloody : Inventory
 {
 inventory.maxamount 1
