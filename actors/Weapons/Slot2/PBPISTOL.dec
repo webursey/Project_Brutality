@@ -1532,7 +1532,7 @@ ACTOR PB_Pistol : PB_Weapon //Replaces Pistol
 		Goto InsertBulletsNoChamber
 	ReloadFromEmpty:
 		//TNT1 A 0 A_JumpIfInventory("PB_PistolHasUnloaded", 1, "Ready3") //Commented this out so it works properly.
-		D5GB BCDEFGH 1 {
+		D5GB BCDEF 1 {
 			if (CountInv("SilencerEquipped") == 1 ) {
 					A_SetWeaponSprite("D5GD");
 			}
@@ -1540,7 +1540,7 @@ ACTOR PB_Pistol : PB_Weapon //Replaces Pistol
 			A_WeaponReady(WRF_NOFIRE);
 		}
 		TNT1 A 0 A_PlaySoundEx("PSRLIN", "Auto")
-		D5GB LMNOPQQRS 1 {
+		D5GB OPQQRS 1 {
 			if (CountInv("SilencerEquipped") == 1 ) {
 					A_SetWeaponSprite("D5GD");
 			}
